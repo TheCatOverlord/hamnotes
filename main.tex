@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=0.75in}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black, 
+    urlcolor=blue,
+}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\graphicspath{{images}}
+\usepackage{bookmark}
+\usepackage{subfiles}
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\title{Ham Radio Notes}
+\author{Firewire - \href{mailto:firewire0x8@protonmail.com}{firewire0x8@protonmail.com}}
+\date{\today}
+\pagestyle{fancy}
+\fancyfoot[RO]{Firewire}
+\begin{document}
+    \pagenumbering{gobble}
+    \maketitle
+    \tableofcontents
+    \newpage
+    \pagenumbering{arabic}
+\end{document}
