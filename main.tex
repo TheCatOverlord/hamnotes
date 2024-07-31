@@ -1,7 +1,12 @@
+%%%%%%%%%%%%
+% Preamble %
+%%%%%%%%%%%%
 \documentclass{article}
 
+% Fancy smaller margins
 \usepackage{geometry}
 \geometry{a4paper, margin=0.75in}
+% Add and config package for embedded links 
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -10,12 +15,18 @@
     linkcolor=black, 
     urlcolor=blue,
 }
+% Allows the use of colored text
 \usepackage{xcolor}
+% Fancy footer at the bottom
 \usepackage{fancyhdr}
+% Setup embedded images
 \usepackage{graphicx}
 \graphicspath{{images}}
+% Allows the use of multiple files
 \usepackage{bookmark}
 \usepackage{subfiles}
+% Needed for embedded color coded code.
+% Probably not using it here but ill keep it for the lolz
 \usepackage{listings}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -39,18 +50,28 @@
     showtabs=false,                  
     tabsize=2
 }
-
 \lstset{style=mystyle}
 
+% Setup the title page
 \title{Ham Radio Notes}
 \author{Firewire - \href{mailto:firewire0x8@protonmail.com}{firewire0x8@protonmail.com}}
 \date{\today}
+% Setup the footer and page style
 \pagestyle{fancy}
 \fancyfoot[RO]{Firewire}
+
+%%%%%%%%%%%%
+% Document %
+%%%%%%%%%%%%
+
+% So it begins
 \begin{document}
+    % Setup and generate the title page
     \pagenumbering{gobble}
     \maketitle
     \tableofcontents
     \newpage
+    % Rest of the document
     \pagenumbering{arabic}
+    \subfileinclude{{section/Overview/main.tex}}
 \end{document}
